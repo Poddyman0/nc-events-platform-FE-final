@@ -217,7 +217,7 @@ function createEventForm() {
             eventUpdateLoading.style.display = "block";
             eventUpdateLoading.innerHTML = "Loading event to update...";
     
-            let response = await fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/event/get/${eventIDDetail}/aevent`, {
+            let response = await fetch(`https://nc-events-platform-be-v2-production.up.railway.app/platform/event/get/${eventIDDetail}/aevent`, {
                 method: 'GET',
             });
             let eventResponse = await response.json();
@@ -251,7 +251,7 @@ function createEventForm() {
                 });
             }
     
-            response = await fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/profiles/get`, {
+            response = await fetch(`https://nc-events-platform-be-v2-production.up.railway.app/platform/profiles/get`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -756,7 +756,7 @@ function createEventForm() {
 
 
                     
-                            fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform//event/put/${eventIDDetail}/eventupdate`, {
+                            fetch(`https://nc-events-platform-be-v2-production.up.railway.app/platform//event/put/${eventIDDetail}/eventupdate`, {
                                 method: 'POST',
                                 headers: {
                                   'Content-Type': 'application/json',

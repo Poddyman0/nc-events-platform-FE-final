@@ -14,7 +14,7 @@ function createEventForm() {
     const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
     const userRoleSignedIn = localStorage.getItem('userRoleSignedIn');
     const atendeeRadioContainer = document.getElementById('atendee-radio-container')
-    fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/profiles/get`, {
+    fetch(`https://nc-events-platform-be-v2-production.up.railway.app/platform/profiles/get`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -460,7 +460,7 @@ function createEventForm() {
                 const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
                 console.log("userTokenSignedIn", userTokenSignedIn)
 
-                fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/event/post`, {
+                fetch(`https://nc-events-platform-be-v2-production.up.railway.app/platform/event/post`, {
                         method: 'POST',
                         headers: {
                         'Content-Type': 'application/json',

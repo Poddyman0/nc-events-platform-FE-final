@@ -17,7 +17,7 @@ function loadEvent () {
     eventLoading.innerHTML = "Loading Event..."
     getEvent () 
     function getEvent () {
-        fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/event/get/${eventIDDetail}/aevent`, {
+        fetch(`https://nc-events-platform-be-v2-production.up.railway.app/platform/event/get/${eventIDDetail}/aevent`, {
                     method: 'GET',
                 })
         .then(response => response.json())
@@ -132,7 +132,7 @@ function deleteEvent () {
         const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
         const eventIDDetail = localStorage.getItem('eventIDDetail');
 
-        fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/event/delete/${eventIDDetail}`, {
+        fetch(`https://nc-events-platform-be-v2-production.up.railway.app/platform/event/delete/${eventIDDetail}`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
