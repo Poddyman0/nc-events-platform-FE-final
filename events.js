@@ -34,7 +34,7 @@ function loadEvents() {
     const eventsLoading = document.querySelector('#events-loading')
     eventsLoading.style.display = "block"
     eventsLoading.innerHTML = "Loading Events..."
-                fetch(`http://localhost:3000/platform/events/get`, {
+                fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/events/get`, {
                     method: 'GET',
                 })
                 .then(response => response.json())

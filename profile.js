@@ -46,7 +46,7 @@ function getProfile () {
     const profileDisplay = document.querySelector('#profile-info-container')
     const loadingProfileInfo = document.querySelector('#loading-profile-info')
     
-    fetch(`http://localhost:3000/platform/profile/get/${userIDSignedIn}/aprofile`, {
+    fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/profile/get/${userIDSignedIn}/aprofile`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ function getEventsInvitedTo() {
     const loadingEventsInvitedTo = document.querySelector('#loading-profile-invites');
     loadingEventsInvitedTo.style.display = "block";
     loadingEventsInvitedTo.innerHTML = "Loading events you're invited to...";
-            fetch(`http://localhost:3000/platform/events/get`, {
+            fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/events/get`, {
                 method: 'GET',
             })
             .then(response => response.json())
@@ -185,7 +185,7 @@ function getEventsInvitedTo() {
                                         let arrayStringAfter = JSON.stringify(cartArrayToEdit);
                                         localStorage.setItem('cartArray', arrayStringAfter);
             
-                                        fetch(`http://localhost:3000/platform/event/delete/${eventIDDetail}/invitee/${userIDSignedIn}`, {
+                                        fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/event/delete/${eventIDDetail}/invitee/${userIDSignedIn}`, {
                                             method: 'POST',
                                             headers: {
                                                 'Content-Type': 'application/json',
@@ -218,7 +218,7 @@ function getEventsInvitedTo() {
                                 deleteInviteButton.addEventListener('click', function (event) {
             
                                     event.preventDefault()
-                                    fetch(`http://localhost:3000/platform/event/delete/${eventIDDetail}/invitee/${userIDSignedIn}`, {
+                                    fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/event/delete/${eventIDDetail}/invitee/${userIDSignedIn}`, {
                                         method: 'POST',
                                         headers: {
                                             'Content-Type': 'application/json',
@@ -280,7 +280,7 @@ function getEventsPurchased ( ) {
         getEvents ()
         let eventsInvitedToArray = []
         function getEvents () {
-            fetch(`http://localhost:3000/platform/events/get`, {
+            fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/events/get`, {
                 method: 'GET',
             })
             .then(response => response.json())
@@ -429,7 +429,7 @@ function deleteProfile () {
         const userIDSignedIn = localStorage.getItem('userIDSignedIn');
         const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
 
-        fetch(`http://localhost:3000/platform/profile/delete/${userIDSignedIn}`, {
+        fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/profile/delete/${userIDSignedIn}`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
@@ -470,7 +470,7 @@ function getCartArray () {
     }
     const cartCardContainer = document.getElementById('cart-container')
     // Parse the string back into an array
-    fetch(`http://localhost:3000/platform/events/get`, {
+    fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/events/get`, {
         method: 'GET',
     })
     .then(response => response.json())
@@ -550,7 +550,7 @@ function proceedToCheckout () {
         cartArrayToEdit.forEach(eventCart => {
             const userIDSignedIn = localStorage.getItem('userIDSignedIn');
             const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
-            fetch(`http://localhost:3000/platform/event/create/${eventCart.eventID}/atendee/${userIDSignedIn}`, {
+            fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/event/create/${eventCart.eventID}/atendee/${userIDSignedIn}`, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',

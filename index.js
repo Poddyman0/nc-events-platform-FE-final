@@ -10,7 +10,7 @@ function eventsInsert() {
     loadingHomepage.style.display = "block"
     loadingHomepage.innerHTML = "Loading event pictures..."
     const homeEventsContainer = document.querySelector('.container-two')
-    fetch(`http://localhost:3000/platform/events/get`, {
+    fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/events/get`, {
         method: 'GET',
     })
     .then(response => response.json())

@@ -58,7 +58,7 @@ function updateProfile() {
         loadingProfileUpdate.style.display = "block"
         loadingProfileUpdate.innerHTML = "Loading your profile..."
 
-        fetch(`http://localhost:3000/platform/profile/get/${userIDSignedIn}/aprofile`, {
+        fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/profile/get/${userIDSignedIn}/aprofile`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -422,7 +422,7 @@ function updateProfile() {
     
                     }
 
-                    fetch(`http://localhost:3000/platform/profile/put/${userIDSignedIn}/profileupdate`, {
+                    fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/profile/put/${userIDSignedIn}/profileupdate`, {
                         method: 'POST',
                         headers: {
                           'Content-Type': 'application/json',

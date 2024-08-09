@@ -19,7 +19,7 @@ function signInForm() {
               profileEmail: emailSignIn.value,
               profilePassword: passwordSignIn.value
             }
-            fetch(`http://localhost:3000/platform/profile/put/signin`, {
+            fetch(`http://nc-events-platform-be-v2-production.up.railway.app/platform/profile/put/signin`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

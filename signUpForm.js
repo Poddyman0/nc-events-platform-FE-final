@@ -307,7 +307,7 @@ function signUpForm () {
     
                     }
 
-                    fetch('http://localhost:3000/platform/profile/post', {
+                    fetch('http://nc-events-platform-be-v2-production.up.railway.app/platform/profile/post', {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json", 
